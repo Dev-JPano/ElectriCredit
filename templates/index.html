@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" data-app="electricredit-v2">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>ElectriCredit</title>
+
+  <meta name="description"
+    content="ElectriCredit is a Capstone Project made by Group45 from BCC" />
+
+  <meta name="theme-color" content="#0f172a" />
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='utils/normalize.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='tailwind.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+
+<body class="min-h-screen bg-slate-950 text-slate-100 antialiased">
+  <noscript>
+    <section class="min-h-screen flex items-center justify-center p-6 text-center">
+      <div class="max-w-md rounded-3xl border border-red-500/30 bg-red-500/10 p-6">
+        <h1 class="text-2xl font-bold">JavaScript Required</h1>
+        <p class="mt-3 text-sm text-red-100">
+          ElectriCredit needs JavaScript enabled to load the dashboard, hardware modules,
+          peopleware tools, and system controls.
+        </p>
+      </div>
+    </section>
+  </noscript>
+
+  <!-- App Loader -->
+  <div id="app-loader" class="ec-loader" aria-live="polite" aria-label="Loading ElectriCredit">
+    <div class="ec-loader__box">
+      <div class="ec-loader__blocks" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <strong>ElectriCredit</strong>
+      <small>Preparing local-first system interface...</small>
+    </div>
+  </div>
+
+  <!-- Main App Root -->
+  <div id="app" class="ec-app">
+    <!-- Header mounts here -->
+    <header id="header-root"></header>
+
+    <!-- Main long-scroll page mounts here -->
+    <main id="main-root">
+      <section id="home-section" class="ec-section" data-section="home"></section>
+      <section id="dashboard-section" class="ec-section" data-section="dashboard"></section>
+      <section id="hardware-section" class="ec-section" data-section="hardware"></section>
+      <section id="peopleware-section" class="ec-section" data-section="peopleware"></section>
+      <section id="software-section" class="ec-section" data-section="software"></section>
+      <section id="about-section" class="ec-section" data-section="about"></section>
+    </main>
+
+    <!-- Footer mounts here -->
+    <footer id="footer-root"></footer>
+  </div>
+
+  <!-- Global modal / overlay mount points -->
+  <div id="modal-root"></div>
+  <div id="toast-root"></div>
+
+  <script src="{{ url_for('static', filename='utils/validator.js') }}"></script>
+  <script src="{{ url_for('static', filename='routing.js') }}"></script>
+
+  <script src="{{ url_for('static', filename='components/header/chatbot/chatbot_structure.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/header/chatbot/chatbot_design.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/header/chatbot/chatbot.js') }}"></script>
+
+  <script src="{{ url_for('static', filename='components/header/theme/theme_structure.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/header/theme/theme_design.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/header/theme/theme.js') }}"></script>
+
+  <script src="{{ url_for('static', filename='components/header/profile/profile_structure.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/header/profile/profile_design.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/header/profile/profile.js') }}"></script>
+
+  <script src="{{ url_for('static', filename='components/header/header_structure.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/header/header_design.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/header/header.js') }}"></script>
+
+  <script src="{{ url_for('static', filename='components/home/home_structure.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/home/home_design.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/home/home.js') }}"></script>
+
+  <script src="{{ url_for('static', filename='components/dashboard/power/power_structure.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/dashboard/power/power_design.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/dashboard/power/power.js') }}"></script>
+
+  <script src="{{ url_for('static', filename='components/dashboard/hub/hub_structure.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/dashboard/hub/hub_design.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/dashboard/hub/hub.js') }}"></script>
+
+  <script src="{{ url_for('static', filename='components/dashboard/user/user_structure.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/dashboard/user/user_design.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/dashboard/user/user.js') }}"></script>
+
+  <script src="{{ url_for('static', filename='components/dashboard/usage/usage_structure.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/dashboard/usage/usage_design.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/dashboard/usage/usage.js') }}"></script>
+
+  <script src="{{ url_for('static', filename='components/dashboard/dashboard_structure.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/dashboard/dashboard_design.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/dashboard/dashboard.js') }}"></script>
+
+  <script src="{{ url_for('static', filename='components/hardware/hub/hub_structure.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/hardware/hub/hub_design.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/hardware/hub/hub.js') }}"></script>
+
+  <script src="{{ url_for('static', filename='components/hardware/registry/registry_structure.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/hardware/registry/registry_design.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/hardware/registry/registry.js') }}"></script>
+
+  <script src="{{ url_for('static', filename='components/hardware/hardware_structure.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/hardware/hardware_design.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/hardware/hardware.js') }}"></script>
+
+  <script src="{{ url_for('static', filename='components/peopleware/user/user_structure.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/peopleware/user/user_design.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/peopleware/user/user.js') }}"></script>
+
+  <script
+    src="{{ url_for('static', filename='components/peopleware/administrator/administrator_structure.js') }}"></script>
+  <script
+    src="{{ url_for('static', filename='components/peopleware/administrator/administrator_design.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/peopleware/administrator/administrator.js') }}"></script>
+
+  <script src="{{ url_for('static', filename='components/peopleware/developer/developer_structure.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/peopleware/developer/developer_design.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/peopleware/developer/developer.js') }}"></script>
+
+  <script src="{{ url_for('static', filename='components/peopleware/peopleware_structure.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/peopleware/peopleware_design.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/peopleware/peopleware.js') }}"></script>
+
+  <script src="{{ url_for('static', filename='components/software/configuration/rates/rates_structure.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/software/configuration/rates/rates_design.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/software/configuration/rates/rates.js') }}"></script>
+
+  <script src="{{ url_for('static', filename='components/software/configuration/logs/logs_structure.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/software/configuration/logs/logs_design.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/software/configuration/logs/logs.js') }}"></script>
+
+  <script
+    src="{{ url_for('static', filename='components/software/configuration/announcement/announcement_structure.js') }}"></script>
+  <script
+    src="{{ url_for('static', filename='components/software/configuration/announcement/announcement_design.js') }}"></script>
+  <script
+    src="{{ url_for('static', filename='components/software/configuration/announcement/announcement.js') }}"></script>
+
+  <script src="{{ url_for('static', filename='components/software/configuration/bonus/bonus_structure.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/software/configuration/bonus/bonus_design.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/software/configuration/bonus/bonus.js') }}"></script>
+
+  <script src="{{ url_for('static', filename='components/software/maintenance/server/server_structure.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/software/maintenance/server/server_design.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/software/maintenance/server/server.js') }}"></script>
+
+  <script
+    src="{{ url_for('static', filename='components/software/maintenance/database/database_structure.js') }}"></script>
+  <script
+    src="{{ url_for('static', filename='components/software/maintenance/database/database_design.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/software/maintenance/database/database.js') }}"></script>
+
+  <script src="{{ url_for('static', filename='components/software/maintenance/backup/backup_structure.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/software/maintenance/backup/backup_design.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/software/maintenance/backup/backup.js') }}"></script>
+
+  <script src="{{ url_for('static', filename='components/software/configuration/wifi/wifi_structure.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/software/configuration/wifi/wifi_design.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/software/configuration/wifi/wifi.js') }}"></script>
+
+  <script src="{{ url_for('static', filename='components/software/software_structure.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/software/software_design.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/software/software.js') }}"></script>
+
+  <script src="{{ url_for('static', filename='components/about/about_structure.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/about/about_design.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/about/about.js') }}"></script>
+
+  <script src="{{ url_for('static', filename='components/footer/footer_structure.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/footer/footer_design.js') }}"></script>
+  <script src="{{ url_for('static', filename='components/footer/footer.js') }}"></script>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
