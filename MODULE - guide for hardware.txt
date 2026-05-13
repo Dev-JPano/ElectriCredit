@@ -1,0 +1,62 @@
+# ElectriCredit module.py quick endpoint examples
+
+# UI device visit is automatic when GET / is requested.
+# Manual:
+POST /api/module/device-visit
+{
+  "mac": "AA:BB:CC:DD:EE:FF",
+  "device": "Chrome on Android",
+  "path": "/",
+  "ip": "192.168.4.30"
+}
+
+# Hub scans a card
+POST /api/module/hub/card
+{
+  "mac": "AA:BB:CC:00:00:01",
+  "uid": "04A1B2C3F0"
+}
+
+# Hub starts a power session
+POST /api/module/hub/session/start
+{
+  "mac": "AA:BB:CC:00:00:01",
+  "uid": "04A1B2C3F0"
+}
+
+# Hub checkpoint every 0.25 kWh or more
+POST /api/module/hub/session/update
+{
+  "session_id": 1,
+  "consumed_kwh": 0.25
+}
+
+# Hub stop/final update
+POST /api/module/hub/session/stop
+{
+  "session_id": 1,
+  "consumed_kwh": 0.75,
+  "reason": "card removed"
+}
+
+# Registry scans a card
+POST /api/module/registry/card
+{
+  "mac": "AA:BB:CC:00:10:01",
+  "uid": "04A1B2C3F0"
+}
+
+# Registry starts top-up hold
+POST /api/module/registry/topup/start
+{
+  "mac": "AA:BB:CC:00:10:01",
+  "uid": "04A1B2C3F0"
+}
+
+# Registry finishes top-up
+POST /api/module/registry/topup/finish
+{
+  "mac": "AA:BB:CC:00:10:01",
+  "uid": "04A1B2C3F0",
+  "amount": 50
+}
